@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 import Ecosystem from './pages/ecosystem/ecosystem'
 import Assets from './pages/assets/assets'
+import Footer from './pages/footer'
 
 const leftComicStrip = ["/assets/manga/chapter1/10-20.png", "/assets/manga/chapter1/20-35.png"]
 const rightComicStrip = ["/assets/manga/chapter4/29-32.png", "/assets/manga/chapter1/45-56.png"]
@@ -98,9 +99,7 @@ export default function Home() {
         <Assets/>
       </div>
       </div>
-      <div className="bg-footer-container" style={{ width: "100vw", height: "200vh"}}>
-        
-      </div>
+      <Footer className="overflow-hidden" style={{width: "100vw"}}/>
         <div className="flex flex-col items-center fixed bottom-20 right-4">
           <div className="flex flex-row pb-1">
             <FontAwesomeIcon className="pr-2"color={"#ffffff"} height={18} icon={faMusic} />

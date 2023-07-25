@@ -4,9 +4,6 @@ import React from "react"
 import YoutubePlayer from "@/app/components/youtube_player"
 
 import Image from 'next/image'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCodeBranch, faMusic } from "@fortawesome/free-solid-svg-icons"
-import { faYoutube, faDiscord, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function MobileGame() {
   return (
