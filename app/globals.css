@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg-image-container {
+  position: relative;
+}
+
+.bg-image-container::before {
+  content: '';
+  background-image: url('/assets/manga/poster/poster.jpg');
+  background-size:contain;
+    background-position: bottom;
+    filter: blur(5px);
+    /* Adjust the blur intensity as needed */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  /* Add the dark overlay for the blur effect */
+  .bg-image-container::after {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Adjust the alpha (4th parameter) to control darkness */
+    width: 100%;
+    height: 101%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .bg-mobile-game-container::before {
+  content: '';
+    background-image: url('/assets/mobile/home_screen.jpg');
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    z-index: -1;
+  
+    /* Blur effect */
+    filter: blur(10px);
+    /* Adjust the value for desired blur intensity */
+  
+    /* Darken the image */
+    /* Adjust the value for desired darkness (0 to 1) */
+  }
+
+  .bg-manga-container::before {
+    content: '';
+    background-image: url('/assets/manga/whoosh.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bg-tcg-container::before {
+    content: '';
+    background-image: url('/assets/manga/torch.jpg');
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 170%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bg-champion-container::before {
+    content: '';
+    background-image: url('/assets/manga/webcomic.jpg');
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 170%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .bg-footer-container::before {
+    content: '';
+    background-image: url('/assets/manga/campfire.jpg');
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 200vh;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+  }
+
+  
+
+    .scrolling-container {
+      animation: scrollAnimation 120s linear infinite;
+    }
+  
+    @keyframes scrollAnimation {
+      0% {
+        transform: translateY(0);
+      }
+  
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .scrolling-container-x {
+      animation: scrollAnimationX 60s linear infinite;
+    }
+
+    @keyframes scrollAnimationX {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+@media screen and (min-width: 600px) {
+  .youtube-player-container {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .youtube-player-container iframe {
+    width: 100%;
+    height: 360px;
+  }
+}
+
+/* For medium-sized screens (between 600px and 900px) */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .youtube-player-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .youtube-player-container iframe {
+    width: 100%;
+    height: 225px;
+    /* You can adjust the height as needed */
+  }
+}
+
+/* For smaller screens (less than 600px) */
+@media screen and (max-width: 599px) {
+  .youtube-player-container {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .youtube-player-container iframe {
+    width: 100%;
+    height: 170px;
+    /* You can adjust the height as needed */
+  }
+}
+
+.scroll-container {
+  width: 100vw;
+  scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
