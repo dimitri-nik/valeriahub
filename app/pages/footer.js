@@ -4,7 +4,7 @@ export default function Footer() {
   return (
       <div style={{ position: "relative", width: "100vw", height: "195vh" }}>
         <Image
-          src="/assets/manga/campfire.jpg" 
+          src="/assets/manga/Campfire.jpg" 
           layout="fill"
           objectFit="contain"
           />
