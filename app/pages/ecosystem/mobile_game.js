@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function MobileGame() {
   return (
      <div>
-      <div className="flex flex-col items-center text-white pt-20 pb-10 px-10" style={{
+      <div className="flex flex-col items-center text-white pt-20 pb-10 text-violet-100" style={{
         backgroundImage: 'url("https://valeriagames.com/images/our-collectibles-bg.webp")',
         backgroundSize: "cover", 
         backgroundPosition: "center",
@@ -42,7 +42,7 @@ export default function MobileGame() {
         </div>
       </div>
     </div>
-        <div className="flex text-sm flex-row bg-black bg-opacity-40 border-4 border-white rounded-lg p-6 mt-8">
+        <div className="flex text-sm flex-row bg-black bg-opacity-40 border-4 border-violet-100 rounded-lg p-6 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
           <div className="w-1/2 flex flex-col text-sm font-medium">
             <p className="mb-2 font-bold text-lg">
               Info
@@ -60,7 +60,7 @@ export default function MobileGame() {
               Play to OWN - buy, sell, share and trade in game assets
             </p>
           </div>
-          <div className="w-1/2 flex flex-col text-sm font-medium ">
+          <div className="w-1/2 flex flex-col text-sm font-medium ml-4">
             <p className="mb-2 font-bold text-lg" >
               Game Modes
             </p>
