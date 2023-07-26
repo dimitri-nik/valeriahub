@@ -6,7 +6,7 @@ export default function Footer() {
         position: "relative", 
         width: "100%", 
         height: "195vh",
-        backgroundImage: 'url("/assets/manga/campfire.jpg")',
+        backgroundImage: 'url("/assets/manga/Campfire.jpg")',
         backgroundSize: "contain", 
         backgroundPosition: "bottom", 
         backgroundRepeat: "no-repeat"
