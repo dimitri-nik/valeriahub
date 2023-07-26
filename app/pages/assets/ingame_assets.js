@@ -8,7 +8,7 @@ const packs = ["/assets/mobile/boosters/grass.jpg", "/assets/mobile/boosters/dar
 export default function InGameAssets() {
   return (
     <div>
-      <div className="flex flex-col items-center pt-20" style={{
+      <div className="flex flex-col items-center pt-16 text-red-100" style={{
         width: "100%",
         overflow: "hidden",
         backgroundImage: 'url("/assets/logos_banners_icons/moonLogo.png")',
@@ -17,7 +17,7 @@ export default function InGameAssets() {
       }}>
         <p className="font-black text-2xl"> In Game Assets </p>
         <Link className="font-bold text-red-400 text-xl underline" href="https://opensea.io/collection/valeria-creatures" target="_blank"> OpenSea  </Link>
-        <div className="flex flex-row bg-black border-4 border-white bg-opacity-50 rounded-lg p-6 mt-8 text-sm mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
+        <div className="flex flex-row bg-black border-4 border-red-100 bg-opacity-50 rounded-lg p-6 mt-8 text-sm mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
           <div className="w-1/2 flex flex-col text-sm">
             <p className="mb-2 font-bold text-lg">
               INFO
@@ -108,7 +108,7 @@ export default function InGameAssets() {
           />
           ))}
         </div>
-        <div className="bg-violet-950 border-4 border-white bg-opacity-100 rounded-lg p-5 my-6 text-sm mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20" >
+        <div className="bg-gray-900 border-4 border-red-100 bg-opacity-80 rounded-lg p-5 my-6 text-sm mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20" >
         <p className="font-medium text-md">
           🎲 These have a small chance to pull alternative and shiny card artworks 🎲
         </p>

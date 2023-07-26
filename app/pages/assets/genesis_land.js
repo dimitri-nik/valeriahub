@@ -63,7 +63,7 @@ export default function GenesisLand() {
             <div className="flex flex-row text-sm font-light text-black bg-white border-4 border-black rounded-lg px-6 py-4 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20"> 
               <p>
                 The $VAL token will be central to the Valeria ecosystem. Utility includes: <br/> Purchasing physical merch and cards, upgrading lands, buying the in game premium currency GEMS at a discount to fiat and more... Liquidity Pool coming soon. <br/>
-                <Link className="font-bold text-blue-500 text-s underline" href="https://opensea.io/collection/valeriagames" target="_blank"> Read the whitepaper for full details & tokenomics </Link>
+                <Link className="font-bold text-blue-500 text-s underline" href="https://valeriagames.com/docs/Valeria_Games_Whitepaper.pdf" target="_blank"> Read the whitepaper for full details & tokenomics </Link>
               </p>
             </div>
       </div>
