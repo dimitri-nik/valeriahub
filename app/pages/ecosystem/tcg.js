@@ -7,14 +7,18 @@ import Link from 'next/link'
 export default function TCG() {
   const cards = ["/assets/tcg/Grizwald_Epic_GrizzlyRoar.jpg", "/assets/tcg/Kuuko_Common_InfernoClaw.png",  "/assets/tcg/physicalcards.JPG", "/assets/tcg/Xenorin_Common_SolarFlare.png", "/assets/tcg/Jiri_Common_Electro Bolt.png","/assets/tcg/Voltra_Common_Dragon_Surge.png"]
   return (
-     <div className="bg-tcg-container">
-      <div className="flex flex-col items-center text-black pt-20 pb-20">
+     <div>
+      <div className="flex flex-col items-center text-white pt-20 pb-10" style={{
+        backgroundImage: 'url("/assets/manga/torch.jpg")',
+        backgroundSize: "cover", 
+        backgroundPosition: "center",
+      }}>
         <div className="flex flex-col text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-10 py-4">
-        <p className="font-black text-2xl"> VALERIA TCG </p>
+        <h1 className="font-black text-2xl"> VALERIA TCG </h1>
         <p className="font-semibold text-lg">🃏 trading card game 🃏</p>
         </div>
-        <div className="flex text-sm flex-row text-orange-100 bg-black border-2 bg-opacity-90 border-orange-100 rounded-lg p-6 mt-8 mx-10">
-          <div className="w-1/2 flex flex-col text-xs font-medium">
+        <div className="flex text-sm flex-row text-orange-100 bg-black border-2 bg-opacity-90 border-orange-100 rounded-lg p-6 mt-8 mx-2 sm:mx-10 md:mx-14, lg:mx-20, xl:mx-20">
+          <div className="w-1/2 flex flex-col font-medium">
             <p className="mb-2 font-bold text-lg">
               Info
             </p>
@@ -29,7 +33,7 @@ export default function TCG() {
               Packs will contain QR codes to mint your pulls as NFT's to play on digital version
             </p>
           </div>
-          <div className="w-1/2 flex flex-col text-xs font-medium ">
+          <div className="w-1/2 flex flex-col font-medium ">
             <p className="mb-2 font-bold text-lg" >
               Deck
             </p>

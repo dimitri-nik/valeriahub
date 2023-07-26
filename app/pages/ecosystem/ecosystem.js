@@ -4,7 +4,7 @@ import Manga from './manga'
 
 export default function Ecosystem() {
   return (
-      <div>
+      <div style={{width:"100%"}}>
           <MobileGame />
           <TCG />
           <Manga />

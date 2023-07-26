@@ -2,17 +2,21 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function ChampionPFP() {
-  const champions=["/assets/champs/2.png", "/assets/champs/16.png", "/assets/champs/fire_male.png", "/assets/champs/light.png", "/assets/champs/metal.jpg", "/assets/champs/grass.png", "/assets/champs/dark.png", "/assets/champs/air.png", "/assets/champs/rock.png", "/assets/champs/15.png", "/assets/champs/14.png", "/assets/champs/6.png", "/assets/champs/13.png", "/assets/champs/10.png", "/assets/champs/17.png"]
+  const champions=["/assets/champs/2.png", "/assets/champs/16.png", "/assets/champs/fire_male.png", "/assets/champs/light.png", "/assets/champs/metal.jpg", "/assets/champs/grass.png", "/assets/champs/dark.png", "/assets/champs/air.png", "/assets/champs/rock.png", "/assets/champs/15.png", "/assets/champs/14.png", "/assets/champs/6.png", "/assets/champs/8.png", "/assets/champs/9.png", "/assets/champs/13.png", "/assets/champs/10.png", "/assets/champs/17.png"]
   return (
-      <div className="flex flex-col items-center text-gray-800 pt-20 px-10"  style={{
-        height: "100vh",
-        width: "100vw",
+      <div className="flex flex-col items-center text-gray-800 pt-16 pb-4"  style={{
+        width: "100%",
+        minHeight: "100vh",
         overflow: "hidden",
-        backgroundColor: "#AFE4DE"
+        backgroundImage: 'url("/assets/manga/team.jpg")',
+        backgroundSize: "cover", 
+        backgroundPosition: "center",
       }}>
-        <p className="font-black text-2xl"> PFP CHAMPIONS </p>
-        <Link className="font-bold text-purple-400 text-xl underline" href="https://opensea.io/collection/valeria-champions" target="_blank"> OpenSea </Link>
-        <div className="flex flex-row bg-white border-4 border-gray-800 text-gray-800 bg-opacity-70 rounded-lg p-6 mt-8">
+        <div className="flex flex-col items-center bg-white bg-opacity-90 rounded-lg px-6 py-4">
+        <h1 className="font-black text-2xl"> PFP CHAMPIONS </h1>
+        <Link className="font-bold text-blue-600 text-xl underline" href="https://opensea.io/collection/valeria-champions" target="_blank"> OpenSea </Link>
+        </div>
+        <div className="flex flex-row bg-white text-gray-800 bg-opacity-90 rounded-lg p-6 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
           <div className="w-1/2 flex flex-col text-sm font-medium mt-4">
             <p className="mb-2 font-bold text-lg">
               INFO
@@ -27,7 +31,7 @@ export default function ChampionPFP() {
               *Not to be confused with in game champions.
             </p>
           </div>
-          <div className="w-1/2 flex flex-col text-sm font-medium mt-4 ">
+          <div className="w-1/2 flex flex-col text-sm font-medium mt-4 ml-2">
             <p className="mb-2 font-bold text-lg" >
               UTILITY
             </p>
@@ -57,4 +61,4 @@ export default function ChampionPFP() {
         </div>
       </div>
   )
-          }
+}

@@ -13,9 +13,9 @@ const rightComicStrip = ["/assets/manga/chapter4/29-32.png", "/assets/manga/chap
 
 export default function Home() {
   return (
-    <main> 
-       <header className="bg-black text-white fixed top-0 z-10 w-full">
-        <nav className="container mx-auto flex justify-around py-4 px-4">
+    <main>
+       <header>
+        <nav style= {{maxWidth: "1000px"}} className="flex justify-around py-4 px-4 bg-black text-white w-full fixed top-0 z-10 overflow-hidden">
           <Link href="#home">
             <p> Home </p>
           </Link>
@@ -30,7 +30,13 @@ export default function Home() {
           </Link>
         </nav>
       </header>
-     <div className="bg-image-container">
+
+      <div className="bg-white text-black" style={{
+        backgroundImage: 'url("/assets/manga/webcomic.jpg")',
+        backgroundSize: "cover", 
+        backgroundPosition: "center",
+        minHeight: "100vh",
+      }}>
         <div id="home" className="flex justify-center py-10" style={{
           height: "100vh",
           overflow: "hidden"
@@ -48,8 +54,8 @@ export default function Home() {
           />
           ))}
         </div>
-        <div className="flex-grow flex-col p-10">
-          <div className="center-image-container mx-20">
+        <div className="flex-grow flex-col">
+          <div className="center-image-container mx-2 p-4 rounded-xl md:mx-8 lg:mx-12 xl:mx-12">
           <Image
             src="/assets/logos_banners_icons/Logo_White_PinkGlow.png"
             alt="Valeria Title"
@@ -60,11 +66,11 @@ export default function Home() {
           />
           </div>
           <div className="flex flex-col items-center ">
-            <div className="max-w-xl mx-auto mt-20 p-10 bg-black bg-opacity-100 rounded-xl">
-              <p className="text-2xl font-black text-center text-white">
-                WELCOME TO THE VALERIA GAMES HUB!</p>
+            <div className="max-w-xl p-6 bg-black bg-opacity-100 mt-10 rounded-xl mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
+              <h1 className="text-2xl font-black text-center text-white">
+                WELCOME TO VALERIA HUB!</h1>
                 <p className="text-l font-medium text-center text-white mt-4">
-                  Explore this community made website and unveil the secrets of Valeria's ecosystem & assets!
+                  Explore this community made fansite and unveil the secrets of Valeria's ecosystem & assets!
               </p>
             </div>
           <Link className="mt-8" href="#ecosystem">
@@ -99,8 +105,8 @@ export default function Home() {
         <Assets/>
       </div>
       </div>
-      <Footer className="overflow-hidden" style={{width: "100vw"}}/>
-        <div className="flex flex-col items-center fixed bottom-20 right-4">
+      <Footer className="overflow-hidden" style={{width: "100%"}}/>
+        <div className="flex flex-col items-center fixed bottom-16 right-4">
           <div className="flex flex-row pb-1">
             <FontAwesomeIcon className="pr-2"color={"#ffffff"} height={18} icon={faMusic} />
            <p className="text-sm"> Land Before the War main theme </p>

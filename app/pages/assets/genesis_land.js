@@ -3,15 +3,16 @@ import Link from 'next/link'
 export default function GenesisLand() {
   return (
     <div>
-      <div className="flex flex-col items-center bg-white text-black pt-20 px-10" style={{
+      <div className="flex flex-col items-center bg-white text-black pt-16 pb-4" style={{
         backgroundImage: 'url("/assets/lands/Legendary_Land_Transparent.png")',
         backgroundSize: "cover", 
-        backgroundPosition: "center"
+        backgroundPosition: "center",
+        minHeight: "100vh",
       }}>
-        <p className="font-black text-2xl"> GENESIS LAND </p>
+        <h1 className="font-black text-2xl"> GENESIS LAND </h1>
         <Link className="font-bold text-blue-500 text-xl underline" href="https://opensea.io/collection/valeriagames" target="_blank"> OpenSea  </Link>
-        <div className="flex flex-row text-sm bg-white border-4 border-black bg-opacity-80 rounded-lg p-6 mt-8">
-          <div className="w-1/2 flex flex-col text-xs font-medium">
+        <div className="flex flex-row text-sm bg-white border-4 border-black bg-opacity-90 rounded-lg p-6 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
+          <div className="w-1/2 flex flex-col font-medium">
             <p className="mb-2 font-bold text-lg">
               MINT INFO
             </p>
@@ -25,7 +26,7 @@ export default function GenesisLand() {
               Raised $3m+.
             </p>
           </div>
-          <div className="w-1/2 flex flex-col text-xs font-medium">
+          <div className="w-1/2 flex flex-col font-medium ml-4">
             <p className="mb-2 font-bold text-lg" >
               STAKING REWARDS
             </p>
@@ -40,8 +41,8 @@ export default function GenesisLand() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row text-sm bg-white border-4 border-black bg-opacity-80 rounded-lg p-6 mt-8">
-          <div className="text-xs font-medium">
+        <div className="flex flex-row text-sm bg-white border-4 border-black bg-opacity-90 rounded-lg p-6 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20">
+          <div className="font-medium">
             <p className="font-bold text-center text-lg">
               RARITY 
             </p>
@@ -59,7 +60,7 @@ export default function GenesisLand() {
             </p>
           </div>
         </div>
-            <div className="flex flex-row text-sm font-light text-black bg-white border-4 border-black rounded-lg px-6 py-4 mt-8 mx-1 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-80"> 
+            <div className="flex flex-row text-sm font-light text-black bg-white border-4 border-black rounded-lg px-6 py-4 mt-8 mx-2 sm:mx-4 md:mx-10 lg:mx-20 xl:m-20"> 
               <p>
                 The $VAL token will be central to the Valeria ecosystem. Utility includes: <br/> Purchasing physical merch and cards, upgrading lands, buying the in game premium currency GEMS at a discount to fiat and more... Liquidity Pool coming soon. <br/>
                 <Link className="font-bold text-blue-500 text-s underline" href="https://opensea.io/collection/valeriagames" target="_blank"> Read the whitepaper for full details & tokenomics </Link>

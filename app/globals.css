@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
@@ -24,90 +16,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.bg-image-container {
-  position: relative;
-}
-
-.bg-image-container::before {
-  content: '';
-  background-image: url('/assets/manga/poster/poster.jpg');
-  background-size:contain;
-    background-position: bottom;
-    filter: blur(5px);
-    /* Adjust the blur intensity as needed */
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  /* Add the dark overlay for the blur effect */
-  .bg-image-container::after {
-    content: '';
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Adjust the alpha (4th parameter) to control darkness */
-    width: 100%;
-    height: 101%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .bg-mobile-game-container::before {
-  content: '';
-    background-image: url('/assets/mobile/home_screen.jpg');
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 120%;
-    position: absolute;
-    z-index: -1;
-  
-    /* Blur effect */
-    filter: blur(10px);
-    /* Adjust the value for desired blur intensity */
-  
-    /* Darken the image */
-    /* Adjust the value for desired darkness (0 to 1) */
-  }
-
-  .bg-manga-container::before {
-    content: '';
-    background-image: url('/assets/manga/whoosh.jpg');
-    background-size: cover;
-    background-position: top;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .bg-tcg-container::before {
-    content: '';
-    background-image: url('/assets/manga/torch.jpg');
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 170%;
-    position: absolute;
-    z-index: -1;
-  }
-
-  .bg-champion-container::before {
-    content: '';
-    background-image: url('/assets/manga/webcomic.jpg');
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 170%;
-    position: absolute;
-    z-index: -1;
-  }
 
   .bg-footer-container::before {
     content: '';
@@ -121,7 +33,6 @@ body {
     background-repeat: no-repeat;
   }
 
-  
 
     .scrolling-container {
       animation: scrollAnimation 120s linear infinite;

@@ -7,11 +7,15 @@ import Image from 'next/image'
 
 export default function MobileGame() {
   return (
-     <div className="bg-mobile-game-container mt-10">
-      <div className="flex flex-col items-center text-black pt-20 px-10 bg-white bg-opacity-10">
-        <div className="flex flex-col text-center bg-white bg-opacity-50 rounded-lg px-10 py-4">
-        <p className="font-black text-2xl"> LAND BEFORE THE WAR </p>
-        <p className="font-semibold text-lg">📱 mobile game 📱</p>
+     <div>
+      <div className="flex flex-col items-center text-white pt-20 pb-10 px-10" style={{
+        backgroundImage: 'url("https://valeriagames.com/images/our-collectibles-bg.webp")',
+        backgroundSize: "cover", 
+        backgroundPosition: "center",
+      }}>
+        <div className="flex flex-col text-center">
+        <p className="font-black text-2xl bg-black bg-opacity-40 rounded-lg p-4 mb-4"> LAND BEFORE THE WAR </p>
+        <h1 className="font-semibold text-lg">📱 mobile game 📱</h1>
         </div>
       <div className="flex flex-col items-center justify-center mt-10">
       <p className="text-sm font-black italic mb-2">COMING SOON</p>
@@ -38,8 +42,8 @@ export default function MobileGame() {
         </div>
       </div>
     </div>
-        <div className="flex text-sm flex-row bg-white border-4 border-black rounded-lg p-6 mt-8">
-          <div className="w-1/2 flex flex-col text-xs font-medium">
+        <div className="flex text-sm flex-row bg-black bg-opacity-40 border-4 border-white rounded-lg p-6 mt-8">
+          <div className="w-1/2 flex flex-col text-sm font-medium">
             <p className="mb-2 font-bold text-lg">
               Info
             </p>
@@ -56,7 +60,7 @@ export default function MobileGame() {
               Play to OWN - buy, sell, share and trade in game assets
             </p>
           </div>
-          <div className="w-1/2 flex flex-col text-xs font-medium ">
+          <div className="w-1/2 flex flex-col text-sm font-medium ">
             <p className="mb-2 font-bold text-lg" >
               Game Modes
             </p>
@@ -71,8 +75,8 @@ export default function MobileGame() {
             </p>
           </div>
         </div>
-        <div className="my-10 mx-4" style={{width: "100vw", maxWidth: "640px"}}>
-          <p className="text-center mb-4 font-semibold"> Great in-depth video of some early gameplay </p>
+          <p className="text-center mt-10 mb-2 font-semibold bg-black bg-opacity-40 rounded-lg px-8 py-2"> Great in-depth video of some early gameplay </p>
+        <div className="mb-10 mx-4" style={{width: "100%", maxWidth: "640px"}}>
           <YoutubePlayer videoId="NNNQqoixaSM" containerClassName="youtube-player-container"/>
         </div>
       </div>

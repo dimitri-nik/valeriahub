@@ -5,7 +5,7 @@ import InGameAssets from './ingame_assets'
 
 export default function Assets() {
   return (
-    <div>
+    <div style={{width:"100%"}} >
       <GenesisLand />
       <ChampionPFP />
       <InGameAssets />
