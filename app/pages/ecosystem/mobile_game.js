@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function MobileGame() {
   return (
      <div>
-      <div className="flex flex-col items-center text-white pt-20 pb-10 text-violet-100" style={{
+      <div className="flex flex-col items-center text-violet-100 pt-20 pb-10 text-violet-100" style={{
         backgroundImage: 'url("https://valeriagames.com/images/our-collectibles-bg.webp")',
         backgroundSize: "cover", 
         backgroundPosition: "center",
@@ -19,7 +19,7 @@ export default function MobileGame() {
         </div>
       <div className="flex flex-col items-center justify-center mt-10">
       <p className="text-sm font-black italic mb-2">COMING SOON</p>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mx-4">
         {/* Column 1 */}
         <div className="sm:w-1/2 pr-10  mb-4">
           <Image
@@ -75,7 +75,7 @@ export default function MobileGame() {
             </p>
           </div>
         </div>
-          <p className="text-center mt-10 mb-2 font-semibold bg-black bg-opacity-40 rounded-lg px-8 py-2"> Great in-depth video of some early gameplay </p>
+          <p className="text-center mt-10 mb-2 font-semibold mx-2 py-2"> Great in-depth video of some early gameplay </p>
         <div className="mb-10 mx-4" style={{width: "100%", maxWidth: "640px"}}>
           <YoutubePlayer videoId="NNNQqoixaSM" containerClassName="youtube-player-container"/>
         </div>
