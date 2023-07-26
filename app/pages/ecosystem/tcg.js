@@ -5,10 +5,10 @@ import { faYoutube, faDiscord, faTiktok, faTwitter } from '@fortawesome/free-bra
 import Link from 'next/link'
 
 export default function TCG() {
-  const cards = ["/assets/tcg/Grizwald_Epic_GrizzlyRoar.jpg", "/assets/tcg/Kuuko_Common_InfernoClaw.png",  "/assets/tcg/physicalcards.JPG", "/assets/tcg/Xenorin_Common_SolarFlare.png", "/assets/tcg/Jiri_Common_Electro Bolt.png","/assets/tcg/Voltra_Common_Dragon_Surge.png"]
+  const cards = ["/assets/tcg/Grizwald_Epic_GrizzlyRoar.jpg", "/assets/tcg/Kuuko_Common_InfernoClaw.png", "/assets/tcg/Voltra_Common_ElectricReflex.jpg",  "/assets/tcg/Krakatoa_Common_Fiery Redirection.jpg", "/assets/tcg/Jiri_Legendary_ThunderSmash.png", "/assets/tcg/Xenorin_Common_SolarFlare.png", "/assets/tcg/Jiri_Common_Rediscovery.png", "/assets/tcg/Krakatoa_Epic_FirestormEruption.jpg", "/assets/tcg/Grizwald_Epic_GrimShadow.jpg", "/assets/tcg/Jiri_Common_Electro Bolt.png","/assets/tcg/Voltra_Common_Dragon_Surge.png", "/assets/tcg/Krakatoa_Legendary_SeaofFlames.jpg", "/assets/tcg/Voltra_Epic_Right_Head_Blast.jpg", "/assets/tcg/Kuuko_Epic_EmberShield.png", "/assets/tcg/Xenorin_Epic_HaloSmash.png"]
   return (
      <div>
-      <div className="flex flex-col items-center text-white pt-20 pb-10" style={{
+      <div className="flex flex-col items-center text-white pt-20" style={{
         backgroundImage: 'url("/assets/manga/torch.jpg")',
         backgroundSize: "cover", 
         backgroundPosition: "center",
@@ -91,15 +91,15 @@ export default function TCG() {
           </div>
 
           <p className="text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-4 py-1 font-black mt-10"> More TCG ARTWORK </p>
-          <div className="champsContainer flex flex-row pt-5 scrolling-container-x">
+          <div className="champsContainer flex flex-row pt-5 scrolling-container-x mb-20">
           {cards.map((url, index) => (
           <Image
-          className="px-4"
+          className="mx-4 transition-transform transform-gpu hover:scale-150"
             key={index}
             src={url}
             alt={`ch ${index}`}
-            width={150}
-            height={150}
+            width={130}
+            height={130}
             objectFit="cover"
           />
           ))}
