@@ -97,10 +97,12 @@ export default function TCG() {
           className="mx-4 transition-transform transform-gpu hover:scale-150"
             key={index}
             src={url}
-            alt={`ch ${index}`}
+            alt={`tcg ${index}`}
             width={130}
             height={130}
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL='/assets/tcg/back.png'
           />
           ))}
         </div>
