@@ -4,7 +4,6 @@ export default function GenesisLand() {
   return (
     <div>
       <div className="flex flex-col items-center bg-white text-black pt-20 px-10" style={{
-        height: "100vh",
         backgroundImage: 'url("/assets/lands/Legendary_Land_Transparent.png")',
         backgroundSize: "cover", 
         backgroundPosition: "center"
