@@ -128,7 +128,7 @@ export default function TCG() {
   return (
     <div>
       {/* ... (existing code) */}
-      <p className="text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-4 py-1 font-black mt-10"> More TCG ARTWORK </p>
+      <p className="text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-4 py-1 font-black mt-10"> Moreee TCG ARTWORK </p>
       <div
         className="champsContainer flex flex-row pt-5 scrolling-container-x mb-20"
         onMouseEnter={handleMouseEnter}
