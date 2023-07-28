@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCodeBranch, faMusic } from "@fortawesome/free-solid-svg-icons"
 import { faYoutube, faDiscord, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
+import React, { useState, useRef } from 'react';
 
 export default function TCG() {
   const cards = ["/assets/tcg/Grizwald_Epic_GrizzlyRoar.jpg", "/assets/tcg/Kuuko_Common_InfernoClaw.png", "/assets/tcg/Voltra_Common_ElectricReflex.jpg",  "/assets/tcg/Krakatoa_Common_Fiery Redirection.jpg", "/assets/tcg/Jiri_Legendary_ThunderSmash.png", "/assets/tcg/Xenorin_Common_SolarFlare.png", "/assets/tcg/Jiri_Common_Rediscovery.png", "/assets/tcg/Krakatoa_Epic_FirestormEruption.jpg", "/assets/tcg/Grizwald_Epic_GrimShadow.jpg", "/assets/tcg/Jiri_Common_Electro Bolt.png","/assets/tcg/Voltra_Common_Dragon_Surge.png", "/assets/tcg/Krakatoa_Legendary_SeaofFlames.jpg", "/assets/tcg/Voltra_Epic_Right_Head_Blast.jpg", "/assets/tcg/Kuuko_Epic_EmberShield.png", "/assets/tcg/Xenorin_Epic_HaloSmash.png"]
@@ -90,22 +91,67 @@ export default function TCG() {
           />
           </div>
 
-          <p className="text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-4 py-1 font-black mt-10"> More TCG ARTWORK </p>
-          <div className="champsContainer flex flex-row pt-5 scrolling-container-x mb-20">
-          {cards.map((url, index) => (
-          <Image
-          className="mx-4 transition-transform transform-gpu hover:scale-150"
-            key={index}
-            src={url}
-            alt={`tcg ${index}`}
-            width={130}
-            height={130}
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL='/assets/tcg/back.png'
-          />
-          ))}
-        </div>
+          // State variable to track hovering status
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Ref to store the scrolling container element
+  const scrollingContainerRef = useRef(null);
+
+  // Function to pause the scrolling
+  const pauseScrolling = () => {
+    if (scrollingContainerRef.current) {
+      scrollingContainerRef.current.style.animationPlayState = "paused";
+    }
+  };
+
+  // Function to resume the scrolling
+  const resumeScrolling = () => {
+    if (scrollingContainerRef.current) {
+      scrollingContainerRef.current.style.animationPlayState = "running";
+    }
+  };
+
+  // Event handler for mouse enter
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+    pauseScrolling();
+  };
+
+  // Event handler for mouse leave
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    resumeScrolling();
+  };
+
+  // ... (existing code)
+
+  return (
+    <div>
+      {/* ... (existing code) */}
+      <p className="text-orange-100 text-center bg-black bg-opacity-70 rounded-lg px-4 py-1 font-black mt-10"> More TCG ARTWORK </p>
+      <div
+        className="champsContainer flex flex-row pt-5 scrolling-container-x mb-20"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        ref={scrollingContainerRef}
+      >
+        {cards.map((url, index) => (
+          <div key={index} className={`mx-4 transition-transform transform-gpu ${isHovering ? "" : "hover:scale-150"}`}>
+            <Image
+              src={url}
+              alt={`tcg ${index}`}
+              width={130}
+              height={130}
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL='/assets/tcg/back.png'
+              onClick={() => showCardPopup(url)}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
           </div>
       </div>
     </div>
